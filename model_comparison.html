@@ -1,0 +1,24 @@
+<h2>Model Comparison</h2>
+
+<table border="1">
+<tr>
+    <th>Model</th>
+    <th>Accuracy</th>
+    <th>Precision</th>
+    <th>Recall</th>
+    <th>F1 Score</th>
+</tr>
+
+{% for model, metrics in results.items() %}
+<tr>
+    <td>{{ model }}</td>
+    <td>{{ metrics.accuracy }}</td>
+    <td>{{ metrics.precision }}</td>
+    <td>{{ metrics.recall }}</td>
+    <td>{{ metrics.f1_score }}</td>
+</tr>
+{% endfor %}
+</table>
+
+<h3>Model Comparison Plot</h3>
+<img src="{{ plot_url }}" alt="Model Comparison Plot" style="max-width: 100%; height: auto;">

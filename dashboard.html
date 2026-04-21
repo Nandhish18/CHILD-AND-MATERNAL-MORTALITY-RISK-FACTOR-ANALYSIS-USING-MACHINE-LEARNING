@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+
+<h2>Welcome {{ username }}</h2>
+<h3>Your Role: {{ role }}</h3>
+
+{% if role == "Admin" %}
+    <p>🔐 Admin Panel Access Granted</p>
+{% elif role == "Doctor" %}
+    <p>🩺 Doctor Dashboard</p>
+{% elif role == "Data Analyst" %}
+    <p>📊 Analytics Dashboard</p>
+{% endif %}
+
+</body>
+</html>

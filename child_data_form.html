@@ -1,0 +1,26 @@
+<h2>Child Data Form</h2>
+
+<form method="POST">
+    Patient ID: <input type="number" name="patient_id" required><br><br>
+
+    Immunization:
+    <select name="immunization">
+        <option>Complete</option>
+        <option>Partial</option>
+        <option>Not Done</option>
+    </select><br><br>
+
+    BMI: <input type="number" step="0.1" name="bmi"><br><br>
+
+    Infection History:
+    <input type="text" name="infection"><br><br>
+
+    Growth Indicator:
+    <select name="growth">
+        <option>Normal</option>
+        <option>Underweight</option>
+        <option>Stunted</option>
+    </select><br><br>
+
+    <button type="submit">Submit</button>
+</form>

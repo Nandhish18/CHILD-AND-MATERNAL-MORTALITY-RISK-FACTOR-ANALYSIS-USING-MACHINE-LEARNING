@@ -1,0 +1,30 @@
+<h2>Neonatal Health Monitoring</h2>
+
+<form method="POST">
+
+Patient ID: <input type="number" name="patient_id" required><br><br>
+
+Heart Rate:
+<input type="number" name="heart_rate" required><br><br>
+
+Temperature (°C):
+<input type="number" step="0.1" name="temperature" required><br><br>
+
+Respiratory Rate:
+<input type="number" name="respiratory_rate" required><br><br>
+
+Infection Risk:
+<select name="infection_risk">
+<option>Low</option>
+<option>Moderate</option>
+<option>High</option>
+</select><br><br>
+
+Growth Status:
+<select name="growth">
+<option>Normal</option>
+<option>Underweight</option>
+</select><br><br>
+
+<button type="submit">Evaluate</button>
+</form>

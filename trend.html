@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Risk Trend Analysis</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+
+<h2 style="text-align:center;">
+📈 Maternal & Child Risk Trend Analysis
+</h2>
+
+<div id="trendChart" style="width:90%;height:500px;margin:auto;"></div>
+
+<script>
+
+    // Sample trend data (Replace dynamically from Flask if needed)
+
+    var dates = [
+        "2026-01-01",
+        "2026-01-02",
+        "2026-01-03",
+        "2026-01-04",
+        "2026-01-05",
+        "2026-01-06",
+        "2026-01-07"
+    ];
+
+    var highRisk = [5, 8, 6, 10, 7, 9, 11];
+    var moderateRisk = [10, 12, 11, 13, 14, 12, 15];
+    var lowRisk = [20, 18, 22, 19, 21, 23, 24];
+
+    var trace1 = {
+        x: dates,
+        y: highRisk,
+        mode: 'lines+markers',
+        name: 'High Risk',
+        line: {color: 'red'}
+    };
+
+    var trace2 = {
+        x: dates,
+        y: moderateRisk,
+        mode: 'lines+markers',
+        name: 'Moderate Risk',
+        line: {color: 'orange'}
+    };
+
+    var trace3 = {
+        x: dates,
+        y: lowRisk,
+        mode: 'lines+markers',
+        name: 'Low Risk',
+        line: {color: 'green'}
+    };
+
+    var layout = {
+        title: "Risk Level Trend Over Time",
+        xaxis: {title: "Date"},
+        yaxis: {title: "Number of Cases"},
+        hovermode: "closest"
+    };
+
+    Plotly.newPlot('trendChart', [trace1, trace2, trace3], layout);
+
+</script>
+
+</body>
+</html>

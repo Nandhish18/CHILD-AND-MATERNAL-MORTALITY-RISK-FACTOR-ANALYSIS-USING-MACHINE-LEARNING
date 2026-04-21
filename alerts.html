@@ -1,0 +1,18 @@
+<h2>🚨 Active Alerts</h2>
+
+{% for alert in alerts %}
+<div style="padding:10px;
+    border:1px solid red;
+    background-color:
+    {% if alert['risk_level']=='High' %} #ffcccc
+    {% elif alert['risk_level']=='Moderate' %} #fff3cd
+    {% else %} #d4edda {% endif %};
+    margin-bottom:10px;">
+
+    <strong>{{ alert['alert_type'] }}</strong><br>
+    Risk Level: {{ alert['risk_level'] }}<br>
+    Message: {{ alert['message'] }}<br>
+    Time: {{ alert['created_at'] }}
+
+</div>
+{% endfor %}

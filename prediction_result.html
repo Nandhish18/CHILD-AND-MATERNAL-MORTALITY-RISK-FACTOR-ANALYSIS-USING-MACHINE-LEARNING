@@ -1,0 +1,17 @@
+<h2>Risk Prediction Result</h2>
+
+<h3>Risk Probability: {{ probability }}%</h3>
+
+<h2 style="color: {{ color }};">
+    {{ risk }}
+</h2>
+
+{% if risk == "High Risk" %}
+    <p>⚠ Immediate medical intervention recommended.</p>
+{% elif risk == "Moderate Risk" %}
+    <p>Monitor regularly and follow preventive care.</p>
+{% else %}
+    <p>Maintain healthy lifestyle and routine checkups.</p>
+{% endif %}
+
+<a href="/risk-prediction">Predict Again</a>

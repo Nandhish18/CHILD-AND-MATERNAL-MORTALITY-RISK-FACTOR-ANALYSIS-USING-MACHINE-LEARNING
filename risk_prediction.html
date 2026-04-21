@@ -1,0 +1,31 @@
+<h2>Mortality Risk Prediction</h2>
+
+<form method="POST">
+
+    Age: <input type="number" name="age" required><br><br>
+
+    Maternal BMI: <input type="number" step="0.1" name="maternal_bmi" required><br><br>
+
+    Diabetes:
+    <select name="diabetes">
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+    </select><br><br>
+
+    Hypertension:
+    <select name="hypertension">
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+    </select><br><br>
+
+    Child BMI: <input type="number" step="0.1" name="child_bmi" required><br><br>
+
+    Immunization:
+    <select name="immunization">
+        <option value="0">Complete</option>
+        <option value="1">Incomplete</option>
+    </select><br><br>
+
+    <button type="submit">Predict Risk</button>
+
+</form>

@@ -1,0 +1,13 @@
+<h2>Model Training Results</h2>
+
+{% for model, metrics in results.items() %}
+    <h3>{{ model }}</h3>
+    Accuracy: {{ metrics.accuracy }} <br>
+    Precision: {{ metrics.precision }} <br>
+    Recall: {{ metrics.recall }} <br>
+    F1 Score: {{ metrics.f1_score }} <br><br>
+
+    <img src="/static/{{ model }}_cm.png" width="300"><br><br>
+{% endfor %}
+
+<a href="/model-comparison">Compare Models</a>

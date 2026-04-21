@@ -1,0 +1,20 @@
+<h2>🧠 AI Decision Support</h2>
+
+<h3>Top Contributing Factors:</h3>
+
+<ul>
+{% for feature, value in features %}
+    <li>{{ feature }} → Impact Score: {{ value }}</li>
+{% endfor %}
+</ul>
+
+<h3>Recommended Actions:</h3>
+
+<ul>
+{% for suggestion in suggestions %}
+    <li>{{ suggestion }}</li>
+{% endfor %}
+</ul>
+
+<h3>SHAP Explanation Graph:</h3>
+<img src="/static/shap_explanation.png" width="600">
